@@ -1,0 +1,44 @@
+Git
+- distributed version control system
+
+
+Create Repo
+Copy or Clone repo to local machine
+Add files of folders (in local repo) and commit changes
+Now push changes to github
+If someone changes something the Pull the changes to local machine
+
+Git Terminology
+- Init
+- Clone
+- Add
+- Commit
+- Pull and Push
+
+- Branching
+- Merging
+- Rebasing
+
+
+1. git config --global user.name "username"
+2. git config --global user.email mail@gmail.com
+3. git clone https://www.github.com/username/reponame.git
+4. git add filename
+5. git commit -m "Any Message" filename
+6. git push -u origin main
+
+git push -u origin master
+
+git branch -M main
+git push -u origin main
+
+git branch branch_name
+git checkout branch_name
+
+
+
+
+
+
+
+
