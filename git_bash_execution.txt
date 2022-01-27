@@ -1,0 +1,445 @@
+ASUS@LAPTOP-NPOKPM76 MINGW64 ~
+$ ls
+ 2021/
+ 2022/
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ FDP_Codes/
+ Favorites/
+ Links/
+'Local Settings'@
+ ML_Algos/
+ ML_Projects/
+ Microsoft/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.TM.blf
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.TMContainer00000000000000regtrans-ms
+ NTUSER.DAT{1c2b59c6-c5f5-11eb-bacb-000d3a96488e}.TMContainer00000000000000regtrans-ms
+ NetHood@
+ OneDrive/
+ PhdProjects/
+ Pictures/
+'PowerBI Datasets'/
+ PowerBIRec/
+ PowerBI_Files/
+ PrintHood@
+ PycharmProjects/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+ Solution.ipynb
+'Start Menu'@
+ TableauWorkbooks/
+ Templates@
+ Untitled.ipynb
+ Untitled1.ipynb
+ Videos/
+'VirtualBox VMs'/
+ WaterLoo/
+ anaconda3/
+ ansel/
+ eclipse/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 ~
+$ cd /c
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c
+$ cd git
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git config --global user.name "testbrainmentors"
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git config --global user.name ravi.brainmentors@gmail.com
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git config --global user.name "testbrainmentors"
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git config --global user.email ravi.brainmentors@gmail.com
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git clone https://github.com/testbrainmentors/test_git.git
+Cloning into 'test_git'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ cd test_git/
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        data.txt
+
+nothing added to commit but untracked files present (use "git add" to track
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git add data.txt
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   data.txt
+
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git commit -m "My first commit" data.txt
+[main c8da19d] My first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 data.txt
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ ls
+README.md  data.txt
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ ls -A
+.git/  README.md  data.txt
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ ls -Al
+total 6
+drwxr-xr-x 1 ASUS 197121  0 Jan 27 10:08 .git/
+-rw-r--r-- 1 ASUS 197121 10 Jan 27 09:50 README.md
+-rw-r--r-- 1 ASUS 197121 23 Jan 27 09:51 data.txt
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ cd .git
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  config       hooks/  info/  objects/     refs/
+HEAD            description  index   logs/  packed-refs
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git/.git (GIT_DIR!)
+$ cd ..
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/testbrainmentors/test_git.git
+   9086f8a..c8da19d  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git remote add origin "https://github.com/testbrainmentors/test_git.git"
+error: remote origin already exists.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 31.12 KiB | 3.46 MiB/s, done.
+From https://github.com/testbrainmentors/test_git
+ * branch            main       -> FETCH_HEAD
+   c8da19d..a886a37  main       -> origin/main
+Updating c8da19d..a886a37
+Fast-forward
+ MongoDocumentation.docx | Bin 0 -> 33997 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 MongoDocumentation.docx
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   data.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git commit -a
+[main 5c6da98] "Changes to be committed"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/testbrainmentors/test_git.git
+   a886a37..5c6da98  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/test_git (main)
+$ cd ..
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git
+$ git init
+Initialized empty Git repository in C:/git/.git/
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git (master)
+$ git init newRepo
+Initialized empty Git repository in C:/git/newRepo/.git/
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git (master)
+$ ls
+newRepo/  test_git/
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git (master)
+$ cd newRepo/
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        appl_1980_2014.csv
+        home_data.csv
+
+nothing added to commit but untracked files present (use "git add" to track
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same asll)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of
+    --ignore-missing      check if - even missing - files are ignored in dr
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are ed with NUL character
+
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git add -A
+warning: LF will be replaced by CRLF in appl_1980_2014.csv.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in home_data.csv.
+The file will have its original line endings in your working directory
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   appl_1980_2014.csv
+        new file:   home_data.csv
+
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git commit -m "New Commits"
+[master (root-commit) 913e62a] New Commits
+ 2 files changed, 30080 insertions(+)
+ create mode 100644 appl_1980_2014.csv
+ create mode 100644 home_data.csv
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git remote add origin https://github.com/testbrainmentors/newRepo.git
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 889.36 KiB | 5.52 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/testbrainmentors/newRepo.git
+ * [new branch]      master -> master
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/testbrainmentors/newt'
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git branch main
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (master)
+$ git checkout main
+Switched to branch 'main'
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/testbrainmentors/newRepo/pull/new/main
+remote:
+To https://github.com/testbrainmentors/newRepo.git
+ * [new branch]      main -> main
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$ git branch images
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$ git checkout images
+Switched to branch 'images'
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git push
+fatal: The current branch images has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin images
+
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git commit -m "Image Data" memory_management.png
+error: pathspec 'memory_management.png' did not match any file(s) known to
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git add memory_management.png
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git commit -m "Image Data" memory_management.png
+[images 02fea92] Image Data
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 memory_management.png
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git push -u origin images
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 122.53 KiB | 30.63 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'images' on GitHub by visiting:
+remote:      https://github.com/testbrainmentors/newRepo/pull/new/images
+remote:
+To https://github.com/testbrainmentors/newRepo.git
+ * [new branch]      images -> images
+Branch 'images' set up to track remote branch 'images' from 'origin'.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git pull origin main
+From https://github.com/testbrainmentors/newRepo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git checkout main
+Switched to branch 'main'
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$ git merge images
+Updating 913e62a..02fea92
+Fast-forward
+ memory_management.png | Bin 0 -> 136432 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 memory_management.png
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$ git checkout images
+Switched to branch 'images'
+Your branch is up to date with 'origin/images'.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git merge main
+Already up to date.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git merge master
+Already up to date.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git status
+On branch images
+Your branch is up to date with 'origin/images'.
+
+nothing to commit, working tree clean
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (images)
+$ git checkout main
+Switched to branch 'main'
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$ git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/testbrainmentors/newRepo.git
+   913e62a..02fea92  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+ASUS@LAPTOP-NPOKPM76 MINGW64 /c/git/newRepo (main)
+$
