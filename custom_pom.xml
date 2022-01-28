@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	
+	<!-- The Basics -->
+ 	<groupId>doc-example</groupId>
+ 	<artifactId>java-maven-demo</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<name>java-maven-demo</name>
+  	<packaging>jar</packaging>
+  	<dependencies>
+  	
+	  <dependency> 
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	  </dependency>
+	  
+	  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.6.5.Final</version>
+	    
+	    <exclusions>
+	    	<exclusion>
+	    		<groupId>org.jboss.logging</groupId>
+      			<artifactId>jboss-logging</artifactId>
+	    	</exclusion>
+	    </exclusions>
+	    
+	</dependency>
+	  
+	  
+	</dependencies>
+  	<!-- <parent></parent> -->
+  	<modules></modules>
+  	<dependencyManagement></dependencyManagement>
+  	<properties>
+  	  <maven.compiler.source>1.7</maven.compiler.source>
+  	  <maven.compiler.target>1.7</maven.compiler.target>
+  	</properties>
+  	
+  	
+  	<!-- Build Settings -->
+  	<build></build>
+  	<reporting></reporting>
+  	
+  	<!-- More Project Information -->
+  	<!-- <name></name>
+  	<description></description>
+  	<url></url>
+  	<licenses></licenses>
+  	<organization></organization>
+  	<developers></developers>
+  	<contributors></contributors> -->
+  	
+  	
+  	<!-- Environment Settings -->
+  	<!-- <prerequisites></prerequisites>
+  	<repositories></repositories>
+  	<profiles></profiles>
+  	<pluginRepositories></pluginRepositories>
+  	<mailingLists></mailingLists> -->
+  	
+
+</project>

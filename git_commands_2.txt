@@ -1,0 +1,24 @@
+Git
+- git config
+- git init
+- git clone
+- git add
+- git clone
+- git pull
+- git push
+- git log
+- git diff
+- git status
+- git reset
+- git remote
+- git branch
+- git merge
+
+
+- git diff (press q to get out of diff command)
+
+Squash - combine multiple commits into one
+Rebasing - way of combining work b/w different branches
+   - it takes a set of commits, copy them and store them outside your repo
+- it works in linear sequence
+

@@ -1,0 +1,163 @@
+
+Build Life Cycle
+POM
+Transitive Dependencies
+Exclusion of Dependencies
+
+
+Build Life Cycle
+- process of building and distributing a particular artifact(project) 
+- build lifecycles is madeup of phases
+
+Phase
+- it is represented as a stage in lifecycle
+
+validate
+compile
+test
+package
+verify
+install
+deploy
+
+
+3 built-in build life cycle
+- default - handles project deployement
+- clean   - handles project cleaning
+- site    - handles the creation of your project's website
+
+default
+- validate
+- initialize
+- compile
+- test-compile
+- test
+- package
+- verify
+- install
+- deploy
+
+clean
+- pre-clean
+- clean
+- post-clean
+
+site
+- pre-site
+- site
+- post-site
+- site deploy
+
+
+
+Build phase is made up of plugins goals
+
+mvn clean  dependency:copy-dependencies package
+
+clean and package are build phases
+dependency:copy-dependencies is a goal of a plugin
+
+
+Phase			plugin:goal
+-------------------------------------------
+compile			compiler:compile
+test			surefire:test
+package			jar:jar, ear:ear, war:war
+install			install:install
+deploy			deploy:deploy
+
+
+Plugins
+- plugins are artifacts that provide goals to Maven
+- a plugin can have one or more goals, 
+  example compiler plugin has 2 goals : compile and testcompile
+
+
+POM - Project Object Model
+- fundamental unit of work in Maven
+- It's an XML file that contains information about the project and configuration details used by maven to build the project
+
+- When we execute a task or a goal, Maven looks for POM in current directory
+
+Super POM
+- Super POM is the Maven's default POM
+
+
+Minimal requirement for POM
+- project       - root
+- modelVersion  - generally set to 4.0.0
+- groupId       - id of the project's group
+- artifactId    - id of the project
+- version       - version of the artifact under specified group
+
+
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.org.app</groupId>
+  <artifactId>app-name</artifact>
+  <version>1</version>
+</project>
+
+fully qualified artifact name will be :
+com.org.app:app-name:1
+
+
+Project Inheritance
+
+- elements in POM are merged
+  - dependencies
+  - developers and contributors
+  - plugins list
+  - plugins execution
+  - plugin configuration
+  - resources
+
+
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.org.app</groupId>
+    <artifactId>app-name</artifact>
+    <version>1</version>
+  </parent>
+
+  <artifactId>app-module-name</artifact>
+
+</project>
+
+
+All about POM.xml
+POM.xml is divided into 4 parts
+  - Basics
+  - Build Settings
+  - More Project Information
+  - Environment Settings
+
+
+Basics
+- it is the declarative manifestation of "who", "what" and "where"
+
+Maven Coodinates
+- groupId
+- artifactId
+- version
+
+Packaging - jar, war, rar, ejb, ear, maven-plugin, pom
+<packaging>war</packaging>
+
+
+Dependencies
+<dependencies>
+  <dependency> 
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+  </dependency>
+</dependencies>
+
+
+
+
+
+
