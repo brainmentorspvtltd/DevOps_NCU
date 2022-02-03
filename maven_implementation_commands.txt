@@ -1,0 +1,84 @@
+Maven Commands using CLI
+Maven Web App Introduction
+Deploy to tomcat server
+=========================================
+
+1. Creat a maven project
+
+maven-archetype
+
+command -> mvn archetype:generate
+
+Archetype
+- maven project templating toolkit
+
+Archetype ArtifactsId
+maven-archetype-archetype
+maven-archetype-mojo
+maven-archetype-webapp
+maven-archetype-quickstart
+
+demo
+- src
+  - main
+    - java
+      - packageName
+	- App.java - main file
+  - test
+    - java
+      - packageName
+	- AppTest.java - Test Cases
+- pom
+
+src/main/java
+src/main/resources
+src/main/webapp
+src/test/java
+src/test/resources
+src/assembly
+src/site
+
+mvn archetype:generate
+-DGroupId = com.bmpl.projectName
+-DartifactId = projectName
+-DarchetypeArtifactId = maven-archetype-quickstart
+-DinteractiveMode = true
+-Dfilter = org.apache.struts
+
+
+2. Clean
+command = mvn clean
+- will delete target folder
+
+3. Compile
+command = mvn compile
+- will compile the main
+
+4. Test Compile
+command = mvn test-compile
+- will compile the test
+
+5. Test
+- command = mvn test
+- will perform testing
+
+6. Install
+- command = mvn install
+- will build jar
+================================================
+
+Maven Web App
+
+1. Create Web based project using Maven
+command => mvn archetype:generate -DgroupId=com.bmpl.webapp -DartifactId=MavenWebApp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+2. Build Web App
+command = mvn clean package
+
+3. Download Tomcat
+4. Copy war file from maven project and paste in webapps folder inside tomcat
+5. Open cmd inside bin folder and type : startup.bat
+6. Open browser and type : localhost:8080/WebAppName/index.jsp
+
+
+
