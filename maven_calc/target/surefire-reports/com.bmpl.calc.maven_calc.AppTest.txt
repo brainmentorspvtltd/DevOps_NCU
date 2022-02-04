@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.bmpl.calc.maven_calc.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! - in com.bmpl.calc.maven_calc.AppTest
+evaluateExpression(com.bmpl.calc.maven_calc.AppTest)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.AssertionError: expected:<11> but was:<10>
+	at com.bmpl.calc.maven_calc.AppTest.evaluateExpression(AppTest.java:19)
+
