@@ -1,0 +1,32 @@
+Write add function with following test cases
+Call -       Result
+add() -       0
+add(10)-     10
+add(1,2)-    3 
+add(1,2,3,4,5) - 15
+add("1","2",3,4,5) - 15
+add(1,"2",three, four,5) - 15
+Here : three is a function which return "3" and four is a function which return 4
+
+add(1,"2",[3,"4"],5) - 15
+add(1,"2",[three, four,"5"]) -15
+
+for Writing TestCases Use Jasmine
+
+Jasmine found here : https://github.com/jasmine/jasmine/releases
+Once all the TestCases pass , so integerate with Docker
+
+Hint: Jasmine is use for unit and integeration testing
+jasmine is a testing framework
+we can write testcases using the following syntax
+e.g it("my first testcase ", function(){
+// Test Case Code Goes Here
+});
+
+all the test cases wrapped in test suite
+describe("my testsuite ", function(){
+it("my first testcase ", function(){
+});
+});
+
+  
