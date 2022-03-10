@@ -1,0 +1,111 @@
+we need to specify the version of the Compose file format, at least one service, and optionally volumes and networks:
+
+version: "14.x"
+services:
+  ...
+volumes:
+  ...
+networks:
+  ...
+
+
+Services
+First of all, services refer to containers' configuration.
+
+For example, let's take a dockerized web application consisting of a front end, a back end, and a database: We'd likely split those components into three images and define them as three different services in the configuration:
+
+services:
+  frontend:
+    image: my-app
+    ...
+  backend:
+    image: my-django-app
+    ...
+  db:
+    image: mysql
+    ...
+
+
+Volumes & Networks
+Volumes, on the other hand, are physical areas of disk space shared between the host and a container, or even between containers. 
+In other words, a volume is a shared directory in the host, visible from some or all containers.
+
+Similarly, networks define the communication rules between containers, and between a container and the host. 
+Common network zones will make containers' services discoverable by each other, while private zones will segregate them in virtual sandboxes.
+
+Configuring the Networking
+Docker containers communicate between themselves in networks created, implicitly or through configuration, by Docker Compose. A service can communicate with another service on the same network by simply referencing it by container name and port (for example network-example-service:80), provided that we've made the port accessible through the expose keyword:
+
+services:
+  network-example-service:
+    image: brainmentors/testapp:latest
+    expose:
+      - "80"
+
+To reach a container from the host, the ports must be exposed declaratively through the ports keyword, which also allows us to choose if exposing the port differently in the host:
+
+services:
+  network-example-service:
+    image: brainmentors/testapp:latest
+    ports:
+      - "80:80"
+    ...
+  my-custom-app:
+    image: myapp:latest
+    ports:
+      - "8080:3000"
+    ...
+  my-custom-app-replica:
+    image: myapp:latest
+    ports:
+      - "8081:3000"
+    ...
+
+
+Setting Up the Volumes
+There are three types of volumes: anonymous, named, and host ones.
+
+Docker manages both anonymous and named volumes, automatically mounting them in self-generated directories in the host. While anonymous volumes were useful with older versions of Docker (pre 1.9), named ones are the suggested way to go nowadays. Host volumes also allow us to specify an existing folder in the host.
+
+We can configure host volumes at the service level and named volumes in the outer level of the configuration, in order to make the latter visible to other containers and not only to the one they belong:
+
+services:
+  volumes-example-service:
+    image: alpine:latest
+    volumes: 
+      - my-named-global-volume:/my-volumes/named-global-volume
+      - /tmp:/my-volumes/host-volume
+      - /home:/my-volumes/readonly-host-volume:ro
+    ...
+  another-volumes-example-service:
+    image: alpine:latest
+    volumes:
+      - my-named-global-volume:/another-path/the-same-named-global-volume
+    ...
+volumes:
+  my-named-global-volume: 
+
+
+Declaring the Dependencies
+Often, we need to create a dependency chain between our services, so that some services get loaded before (and unloaded after) other ones. We can achieve this result through the depends_on keyword:
+
+services:
+  kafka:
+    image: wurstmeister/kafka:2.11-0.11.0.3
+    depends_on:
+      - zookeeper
+    ...
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ...
+
+
+Managing Environment Variables
+Working with environment variables is easy in Compose. We can define static environment variables, and also define dynamic variables with the ${} notation:
+
+services:
+  database: 
+    image: "postgres:${POSTGRES_VERSION}"
+    environment:
+      DB: mydb
+      USER: "${USER}"
