@@ -1,0 +1,18 @@
+Open powershell as admin
+1. Install choclatey
+   https://chocolatey.org/install
+2. Open cmd as admin
+	> choco install kubernetes-cli
+3. Verify installation
+	> kubectl version --client
+4. Create a directory .kube
+	> mkdir .kube
+5. Create a config file in .kube folder without in extension
+6. Now install MiniKube
+	> choco install minikube
+7. Start minikube
+	> minikube start
+8. Check out the minikube status
+	> minikube status
+9. Start dashboard
+	> minikube dashboard

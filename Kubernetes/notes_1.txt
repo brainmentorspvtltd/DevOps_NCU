@@ -1,0 +1,71 @@
+Containers
+- containerization is performed at software level not at hardware level
+
+
+Challenges with container
+- manual deployment of containers is hard to maintain
+- containers might crash or go down and needs to be replaced
+- if traffic increases than we might need more containers or traffic is low than we might need less containers
+- auto scaling is not supported
+- load balancing
+- traffic should be distributed equally
+- suppose we have deployed containers on virtual machine docker and docker gets reboot or someone kills the container then whole application will be down
+
+
+Solution is container orchestration
+
+Container orchestration - after creating image how we make container highly available or auto scalable
+- if one container goes down than other container starts
+
+Kubernetes(K8s) is one of the container management tool
+- earlier build by google and written in golang
+- managed by cloud native platforms
+- automates the container deployement, container (de)scaling and container load balancing
+
+Kubernetes follows master and slave architecture
+- one master and multiple slaves are there
+
+
+Architecture of Kubernetes
+1. It all starts with a container that we want to deploy in the kubernetes is actually managed by something known as pod
+  - pod is the smallest possible unit in kubernetes which you can define in some configuration file for kubernetest to create
+  - pod is simply a container or it can hold multiple containers which might work together
+
+2. Now this pod then itself runs inside a worker node
+  - worker node is that which runs the container in the end
+  - worker node is just a machine or virtual instance like in AWS we have EC2
+  - woker node is simply a computer somewhere with some memory and CPU and on that machine where we can run our pod
+  - you can have more than one pod on the same worker node
+
+3. Kubernetes also needs a proxy which is some other tool which controls the network traffic of the pods on that worker node
+
+4. In kubernetes we need atleast one worker node to run our pod and container but for bigger applications we will be having multiple worker nodes. Because you might need more than one server to run all our container. That includes container scaling. We want kubernetes to add or remove containers dynamically and therefore pods as traffic increases or decreases these pods are distributed automtically by kubernetes across all available worker nodes. So you can have different and equal containers running on multiple worker nodes to distribute work load evenly
+
+5. All these containers and worker nodes need to be managed by someone. Someone we need who can start or shutdown these nodes. So we have master node who controls the worker nodes with the help of control plane. We don't directly interact with worker node or pods. We let kubernetes and it's control plane to do that.
+
+6. Master node is another machine that controls all deployment which is responsible for interacting with worker node.
+
+7. Control plane is collection of tools and services that are running on master node.
+
+8. All together this forms a cluster of master and worker and one network in which all these different parts are connected
+
+9. Then master node is able to send instructions to cloud provider API
+
+
+
+
+
+
+
+
+
+Features of kubernetes
+- Automatic Binpacking
+- Service Discovery & Load Balancing
+- Storage Orchestration
+- Self Healing
+- Secret & Configuration Management
+- Batch Execution
+- Horizontal Scaling
+- Automatic Rollbacks & Rollouts
+

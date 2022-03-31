@@ -1,0 +1,12 @@
+Open Docker
+Click on settings and then click on Kubernetes
+Check Enable Kubernetes and apply
+
+Get the YAML configured file : https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-rc7/aio/deploy/recommended.yaml
+Enter Commands : 
+> kubectl apply –f .\recommended.yaml
+> Kubectl.exe get –f .\recommended.yaml.txt
+> ((kubectl -n kube-system describe secret default | Select-String "token:") -split " +")[1]
+Copy the generated token
+> kubectl proxy
+Open : http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
